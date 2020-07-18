@@ -8,9 +8,9 @@
  *
  * Please update the following with your information:
  *
- *      Name: Sungsoo Cho
- *      Student ID: 121182190
- *      Date: 2020.02.11
+ *      Name: <YOUR_NAME>
+ *      Student ID: <YOUR_STUDENT_ID>
+ *      Date: <SUBMISSION_DATE>
  *
  * Please see all unit tests in the files problem-1.test.js, problem-2.test.js, etc.
  */
@@ -80,7 +80,7 @@ function firstCountry() {
   // Get the first element from the users Array
   let firstUser = users[0];
   // TODO: fix this code to use dot notation to access the country portion only
-  return firstUser.address.country;
+  return firstUser.address;
 }
 
 /*******************************************************************************
@@ -104,11 +104,7 @@ function firstCountry() {
  ******************************************************************************/
 
 function formatNames() {
-  var name = [];
-  for (var i = 0; i < users.length; i++) {
-    name = users[i].name.first + ' ' + users[i].name.last;
-    console.log(name);
-  }
+  // TODO: your code here...
 }
 
 /*******************************************************************************
@@ -133,15 +129,7 @@ const userUtils = {};
  * Your function should return the managers Array.
  ******************************************************************************/
 
-userUtils.getManagers = function() {
-  let managers = [];
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].isManager === true) {
-      managers.push(users[i]);
-    }
-  }
-  return managers;
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 3: create userUtils.getOldestUser()
@@ -171,23 +159,7 @@ function getAgeInYears(birthDate) {
   return age;
 }
 
-userUtils.getOldestUser = function() {
-  let bDate = [];
-  users.forEach(function(user) {
-    bDate.push(getAgeInYears(new Date(user.birthDate)));
-  });
-
-  let max = bDate[0];
-  let maxage = 0;
-
-  for (let i = 0; i < bDate.length; i++) {
-    if (bDate[i] > max) {
-      maxage = i;
-      max = bDate[i];
-    }
-  }
-  return users[maxage];
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 4: create userUtils.getProfiles()
@@ -223,25 +195,7 @@ userUtils.getOldestUser = function() {
  *                          If missing, use the same value as width.
  ******************************************************************************/
 
-userUtils.getProfiles = function(width, height) {
-  let profile = users.map(function() {
-    let getData = {};
-    return getData;
-  });
-
-  for (let i = 0; i < users.length; i++) {
-    profile[i].email =
-      users[i].name.first + ' ' + users[i].name.last + ' ' + '<' + users[i].contact.email + '>';
-    if (height === undefined) {
-      profile[i].image = `https://faces.com/user/${users[i].id}?width=${width}&height=${width}`;
-    } else {
-      profile[i].image = `https://faces.com/user/${users[i].id}?width=${width}&height=${height}`;
-    }
-    profile[i].id = users[i].id;
-  }
-
-  return profile;
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 5: create userUtils.updateAccessCount()
@@ -283,28 +237,7 @@ userUtils.getProfiles = function(width, height) {
  * @param {Number|Array} ids - the id (Number) or ids (Array) of user(s) to update
  ******************************************************************************/
 
-userUtils.updateAccessCount = function(amount, ids) {
-  let inputId = [];
-  let updateUser = [];
-  if (typeof ids === 'number') {
-    inputId.push(ids);
-  } else {
-    inputId = ids;
-  }
-
-  for (let i = 0; i < inputId.length; i++) {
-    let update = users.find(function(element) {
-      return element.id === inputId[i];
-    });
-
-    if (update === undefined) {
-      updateUser = [];
-    } else {
-      updateUser.push({ id: update.id, accessCount: (update.accessCount += amount) });
-    }
-  }
-  return updateUser;
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 6: create userUtils.search.byName()
@@ -340,27 +273,8 @@ userUtils.updateAccessCount = function(amount, ids) {
  * @param {String} name - the name or name portion to search for
  * @param {Boolean} fuzzy - if true, do a fuzzy search; otherwise do an exact search
  ******************************************************************************/
-userUtils.search = {
-  byName: function(name, fuzzy) {
-    let searchName = [];
 
-    if (fuzzy === false || fuzzy === undefined) {
-      let a = users.filter(function(user) {
-        return user.name.first === name || user.name.last === name;
-      });
-      searchName = a;
-    } else {
-      let b = users.filter(function(user) {
-        return (
-          `${user.name.first}`.toUpperCase().startsWith(name.toUpperCase()) === true ||
-          `${user.name.last}`.toUpperCase().startsWith(name.toUpperCase()) === true
-        );
-      });
-      searchName = b;
-    }
-    return searchName;
-  }
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 7: create userUtils.search.byCountry()
@@ -386,22 +300,7 @@ userUtils.search = {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
  ******************************************************************************/
 
-userUtils.search.byCountry = function() {
-  let countryName = [];
-  let searchCountry = [];
-  let countries = [];
-
-  for (let i = 0; i < arguments.length; i++) {
-    countryName.push(arguments[i]);
-  }
-  for (let i = 0; i < countryName.length; i++) {
-    countries = users.filter(function(nation) {
-      return nation.address.country === countryName[i];
-    });
-    searchCountry = countries;
-  }
-  return searchCountry;
-};
+// TODO: your code here...
 
 /*******************************************************************************
  * Problem 8: create userUtils.createWelcomeEmails()
@@ -449,27 +348,7 @@ userUtils.search.byCountry = function() {
  *    index notation (o[foo]).
  ******************************************************************************/
 
-userUtils.createWelcomeEmails = function() {
-  let email = [];
-  let receivers = users.filter(function(checkAcount) {
-    if (checkAcount.accessCount === 0) {
-      return checkAcount;
-    }
-  });
-
-  for (let i = 0; i < receivers.length; i++) {
-    let message = `Dear ${receivers[i].name.first} ${receivers[i].name.last}
-Welcome to imaginary application!  We're so happy you joined, and wanted
-to take a moment to say hello. Our other users from ${receivers[i].address.city}, ${receivers[i].address.country} will
-be glad to have you join them.
-
-Have a great day!
-
-Your Friends at the Imaginary Application Team`;
-    email[receivers[i].contact.email] = message;
-  }
-  return email;
-};
+// TODO: your code here...
 
 // Expose functions for unit tests, you can leave these alone.
 exports.firstCountry = firstCountry;
