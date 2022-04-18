@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#Introduction)
-- [Instructions] (#Instructions)
+- [Instructions](#Instructions)
 
 ## Introduction
 - This assignment represents interactive DOM programming.
