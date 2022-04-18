@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB222 - Assignment 3</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/lab3-theme.css" />
+  </head>
+  <body>
+    <header>
+      <div class="center">
+        <h1>
+          WEB222 - Assignment 3 - Table
+        </h1>
+      </div>
+    </header>
+
+    <nav>
+      <div class="center">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">List</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="image.html">Image</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="honesty.html">Honesty</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="main center">
+        <!-- Start your code here -->
+        <h2>HTML Tables</h2>
+
+        <h3>Table 1</h3>
+        <table>
+          <caption>
+            Enrolled Program Information
+          </caption>
+          <tr>
+            <th style="border:1.5px solid;">Program</th>
+            <th style="border:1.5px solid;">Courses enrolled</th>
+            <th style="border:1.5px solid;">Schedule</th>
+          </tr>
+
+          <tr>
+            <td rowspan="5" style="border:1px solid;">
+              Computer<br />
+              Programming and<br />
+              Data Analysis<br />
+              (CPA)<br />
+              2nd Semester<br />
+            </td>
+            <td style="border:1px solid;">WEB 222</td>
+            <td style="border:1px solid;">
+              Monday: 08:00AM - 09:45AM<br />
+              A2534<br />
+              Friday: 09:50AM - 11:35AM<br />
+              K3000
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid;">DBS 211</td>
+            <td style="border:1px solid;">
+              Monday: 09:50AM - 11:35AM<br />
+              K3000<br />
+              Thursday: 01:30PM - 03:15PM<br />
+              A4512
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid;">OOP 211</td>
+            <td style="border:1px solid;">
+              Tuesday: 02:35PM - 04:10PM<br />
+              C3032<br />
+              Friday: 08:00AM - 09:45AM<br />
+              A1531A
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border:1px solid;">DCF 255</td>
+            <td style="border:1px solid;">
+              Thursday: 08:00Am - 10:40Am<br />
+              A1508
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px solid;">EAC 297</td>
+            <td style="border:1px solid;">Online<br /></td>
+          </tr>
+        </table>
+
+        <h3>Table 2</h3>
+        <table>
+          <caption>
+            My favorite Songs
+          </caption>
+          <thead>
+            <tr>
+              <th style="border:1.5px solid;">Title</th>
+              <th style="border:1.5px solid;">Singer</th>
+              <th style="border:1.5px solid;">Link</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td style="border:1px solid;">Karma Police</td>
+              <td style="border:1px solid;">Radiohead</td>
+              <td style="border:1px solid;">
+                <a href="https://youtu.be/1uYWYWPc9HU"> Karma Police</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid;">Song Request</td>
+              <td style="border:1px solid;">Lee, Sora</td>
+              <td style="border:1px solid;">
+                <a href="https://youtu.be/ij0SQZcqnPU"> Song Request</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border:1px solid;">If you really love me</td>
+              <td style="border:1px solid;">Buscker Buscker</td>
+              <td style="border:1px solid;">
+                <a href="https://youtu.be/nteCoZ3ZX_Q"> If you really love me</a>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th colspan="3">
+                Have a good time with these songs
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h3>Table 3</h3>
+        <div id="table"></div>
+        <!-- End your code here  -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="center">
+        &copy; 2020 Sungsoo Cho
+      </div>
+    </footer>
+
+    <script src="js/table.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Error: No configuration provided for C:\Users\sungs\Documents\Seneca\2020Winter\WEB222\A3\assignment\src\css\lab3-theme.css
+    at module.exports (C:\Users\sungs\Documents\Seneca\2020Winter\WEB222\A3\assignment\node_modules\stylelint\lib\utils\configurationError.js:11:27)
+    at C:\Users\sungs\Documents\Seneca\2020Winter\WEB222\A3\assignment\node_modules\stylelint\lib\getConfigForFile.js:64:11
+    at async Promise.all (index 0)

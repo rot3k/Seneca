@@ -1,0 +1,24 @@
+window.onload = function(){
+  let.spanMouseX = document.querySelector('#mouse-X');
+  let.spanMouseY = document.querySelector('#mouse-Y');
+
+function handleMouseMove(event){
+let x = event.x;
+let y = event.y;
+
+
+
+spanMouseX.innerText = x;
+spanMouseY.innerText = y;
+
+}
+// If you only have 1 function to call for the event
+
+document.body.onmousemove = handleMouseMove;
+
+// If you have more 1
+document.body.addEventListener('mousemove', handleMouseMove)
+document.body.addEventListener('mousemove', function(e))
+console.log(e);
+});
+};
