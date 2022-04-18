@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  
+  </head>
+
+  <body>
+    <header>
+      <div id="Top">
+        <div class="container">
+          <a href="index.html" id="homeLink">
+            <image id="logo" src="image/logo/logo.png" alt="myLogo"></image>
+          </a>
+        </div>
+        <p id="welcome">
+          Welcome to Eve's Craft. We are selling hand-made leather items for you. <br />
+          All items are made by ourselves with love and sincerity. <br />
+          If you have any questions or want to order customized bags, <br />
+          please contact us. Thank you! <br />
+        </p>
+        <div id="menu">
+          <nav id="nav">
+            <ul>
+              <li>
+                <a href="index.html">
+                  <i class="fas fa-home"></i>
+                  Home</a
+                >
+              </li>
+
+              <li class="active">
+                <a href="Contact.html">
+                  <i class="fas fa-file-signature"></i>
+                  Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="myNav" class="overlay">
+          <h1 id="cTitle">Contact</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+      <div class="formC">
+        <form id="formas" action="https://httpbin.org/post" method="post">
+          <label for="fname">First Name </label>
+          <input type="text" name="fname" placeholder="Enter First Name" required />
+          <label for="lname">Last Name </label>
+          <input type="text" name="lfname" placeholder="Enter Last Name" required />
+          <label for="emailA">Email Address </label>
+          <input type="email" name="email" placeholder="Enter Email Address" required />
+          <label for="add">Address </label>
+          <input type="text" name="address" placeholder="Enter Address" />
+          <label for="city">City </label>
+          <input type="text" name="city" list="cityList" placeholder="Select City on the List" />
+          <datalist id="cityList">
+            <option label="Barrie" value="Barrie"></option>
+            <option label="Calgary" value="Calgary"></option>
+            <option label="Charlottetown" value="Charlottetown"></option>
+            <option label="Chibougamau" value="Chibougamau"></option>
+            <option label="Chilliwack" value="Chilliwack"></option>
+            <option label="Cold Lake" value="Cold Lake"></option>
+            <option label="Dorval" value="Dorval"></option>
+            <option label="Edmonton" value="Edmonton"></option>
+            <option label="Flin Flon" value="Flin Flon"></option>
+            <option label="Hamilton" value="Hamilton"></option>
+            <option label="Iqualuit" value="Iqualuit"></option>
+            <option label="Ottawa" value="Ottawa"></option>
+            <option label="Miramichi" value="Miramichi"></option>
+            <option label="Montreal" value="Montreal"></option>
+            <option label="Red Deer" value="Red Deer"></option>
+            <option label="St. John" value="St. John"></option>
+            <option label="St. John's" value="St. John's"></option>
+            <option label="Toronto" value="Toronto"></option>
+            <option label="Vancouver" value="Vancouver"></option>
+            <option label="Whitehorse" value="Whitehorse"></option>
+            <option label="Winnipeg" value="Winnipeg"></option>
+            <option label="Yellowknife" value="Yellowknife"></option>
+          </datalist>
+
+          <label for="postal">Postal Code </label>
+          <input
+            type="text"
+            name="postal"
+            pattern="^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[A-Za-z]{1}\d{1}[A-Za-z]{1}\d{1}$"
+            placeholder="Enter Postal Code (No Space)"
+          />
+
+          <label for="phone">Phone Number </label>
+          <input
+            type="text"
+            name="phone"
+            pattern="\D*([2-9]\d{2})(\D*)([2-9]\d{2})(\D*)(\d{4})\D*"
+            placeholder="Enter Phone Number (No Space)"
+          />
+
+          <div id="checkB">
+            <label for="phoned">Would you like to be phoned?</label>
+            <input type="checkbox" value="1" id="phoned" name="phoned" />
+          </div>
+
+          <div id="radio">
+            <input
+              type="radio"
+              id="question"
+              name="radios"
+              value="question"
+              onclick=" openProblem(this.value,'selectOrder')"
+            />
+            <label for="question">Question</label>
+            <input
+              type="radio"
+              id="comment"
+              name="radios"
+              value="comment"
+              onclick=" openProblem(this.value,'selectOrder')"
+            />
+            <label for="comment">Comment</label>
+            <input
+              type="radio"
+              id="problem"
+              name="radios"
+              value="problem"
+              onclick=" openProblem(this.value,'selectOrder')"
+            />
+            <label for="problem">Order Problem</label>
+          </div>
+
+          <div id="selectOrder" style="display: none;">
+            <label for="orderN">Order Number</label>
+            <input
+              id="orderN"
+              type="text"
+              name="orderN"
+              placeholder="Enter Order Number"
+              style="width: 100%;"
+            />
+          </div>
+
+          <label for="inputText">Anything other comment?</label>
+          <textarea id="inputText" name="inputText" wrap="soft"></textarea>
+          <input type="submit" id="submit" value="Send" />
+          <input type="hidden" name="myname" value="Sungsoo Cho" />
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footerLogo">
+        <image id="logo" src="image/logo/logo.png" alt="myLogo"></image>
+      </div>
+      <div id="copyright">
+        <span id="myname">Sungsoo Cho</span> <br />
+        <span id="copyr">copyright(c) 2020 All rights reserved </span>
+      </div>
+
+      <button id="openB" onclick="openForm()">Subscribe</button>
+      <div class="formP" id="myForm">
+        <form id="forms" action="https://formspree.io/xqkdjbzo" method="post">
+          <label for="name">Name: </label>
+          <input type="text" name="name" required />
+          <label for="_replyto">Email: </label>
+          <input type="email" name="_replyto" required />
+          <button type="submit" id="btn" value="Send">Send</button>
+          <button type="button" id="btnC" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>

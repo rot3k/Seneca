@@ -1,0 +1,603 @@
+/* index */
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  font-family: 'Slabo 27px', serif;
+}
+
+.container {
+  padding-left: 10%;
+}
+
+#logo {
+  max-width: 100%;
+  height: auto;
+  width: 12%;
+}
+
+#welcome {
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 1.5vw;
+  text-align: left;
+  margin-top: -9.5vw;
+  padding-left: 28vw;
+}
+
+/** navigation **/
+
+#nav {
+  position: absolute;
+  right: 0vw;
+  top: 0.9vw;
+}
+
+#nav > ul > li {
+  float: left;
+  list-style-type: none;
+}
+
+#nav > ul > li > a {
+  display: block;
+  padding: 0.5vw 0.5vw;
+  letter-spacing: 0.08vw;
+  font-size: 1.2vw;
+  color: black;
+}
+
+#nav li.active a {
+  color: rgb(248, 80, 108);
+}
+
+#nav > ul > li > ul {
+  position: relative;
+  display: flex;
+}
+
+#nav > ul > li > i {
+  position: relative;
+  top: 2.15vw;
+  right: 0.1vw;
+}
+/** sideMenu **/
+.overlay {
+  height: 100%;
+  width: 8vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 109, 128, 0.952);
+}
+
+#cTitle {
+  margin-top: 3vw;
+  font-size: 1.5vw;
+  text-align: right;
+  padding-right: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.overlay button {
+  margin-bottom: 1vw;
+  display: block;
+  font-size: 1.2vw;
+  background-color: rgba(255, 109, 128, 0.952);
+  width: 100%;
+  text-align: right;
+  border: none;
+  outline: none;
+  font-family: 'Slabo 27px', serif;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.overlay button:hover {
+  background-color: rgba(255, 44, 72, 0.952);
+  color: white;
+}
+
+/** product **/
+#image {
+  height: auto;
+  max-width: 80%;
+  width: 600px;
+}
+
+.dec {
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+#price {
+  text-align: left;
+  font-size: 1.5vw;
+}
+
+.category {
+  margin-top: -7vw;
+  padding-left: 8vw;
+  display: grid;
+  grid-auto-rows: 30vw;
+  align-items: center;
+  grid-template-columns: repeat(1, 10fr);
+}
+
+#cBags {
+  padding-left: 8vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 8vw;
+}
+
+#bTitle {
+  font-size: 2vw;
+  text-align: center;
+  border-bottom-style: solid;
+  font-family: 'Roboto Slab', serif;
+}
+
+#cClutches {
+  padding-left: 8vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 8rem;
+}
+
+#ccTitle {
+  font-size: 2vw;
+  text-align: center;
+  border-bottom-style: solid;
+  font-family: 'Roboto Slab', serif;
+}
+
+#cWallets {
+  padding-left: 8vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 8rem;
+}
+
+#wTitle {
+  font-size: 2vw;
+  text-align: center;
+  border-bottom-style: solid;
+  font-family: 'Roboto Slab', serif;
+}
+
+#cAccs {
+  padding-left: 8vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 8rem;
+}
+
+#aTitle {
+  font-size: 2vw;
+  text-align: center;
+  border-bottom-style: solid;
+  font-family: 'Roboto Slab', serif;
+}
+
+/** footer **/
+footer {
+  margin-top: 10vw;
+  margin-bottom: -5vw;
+}
+
+#footerLogo {
+  padding-left: 10vw;
+}
+
+#copyright {
+  font-family: 'Slabo 27px', serif;
+  font-size: 0.8vw;
+  padding-left: 11.5vw;
+  color: #707465;
+}
+
+footer button {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.8vw;
+}
+
+#openB {
+  background-color: #9de3d0;
+  color: black;
+  padding: 1vw 1vw;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 1vw;
+  right: 2vw;
+  width: 15vw;
+  font-size: 1.5vw;
+}
+
+.formP {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-bottom: 10vw;
+  bottom: 10vw;
+  right: 20vw;
+  border: 3px solid #f8d5d5;
+  width: 40%;
+  height: 40%;
+  background-color: rgba(253, 243, 243, 0.904);
+}
+
+#forms {
+  padding: 5vw 5vw 5vw 5vw;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5vw;
+}
+
+#forms #btn {
+  background-color: #97ee6f;
+  color: rgb(5, 5, 5);
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+  padding: 1vw 2vw;
+  margin-top: 3vw;
+  margin-bottom: 1vw;
+}
+
+#forms #btnC {
+  background-color: rgb(134, 131, 131);
+  color: rgb(5, 5, 5);
+  padding: 0.5vw;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 1vw 2vw;
+  opacity: 0.8;
+}
+
+#forms #btn:hover,
+#openB:hover {
+  opacity: 1;
+}
+
+/** form **/
+#forms input[type='text'],
+#forms input[type='email'] {
+  width: 98%;
+  margin-bottom: 2vw;
+  border: none;
+  background: #f5cece;
+  font-size: 2vw;
+}
+
+#forms input[type='text']:focus,
+#forms input[type='email']:focus {
+  background-color: rgb(204, 198, 198);
+  outline: none;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #f7f7f7;
+  }
+
+  div {
+    font-family: 'Slabo 27px', serif;
+  }
+
+  .container {
+    padding-left: 20%;
+  }
+
+  #logo {
+    max-width: 100%;
+    height: auto;
+    width: 30%;
+  }
+
+  #welcome {
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-top: -20%;
+    padding-left: 45%;
+  }
+
+  /** navigation **/
+
+  #nav {
+    position: absolute;
+    right: 5%;
+    top: 0;
+  }
+
+  #nav > ul > li {
+    float: left;
+    list-style-type: none;
+  }
+
+  #nav > ul > li > a {
+    display: block;
+    padding: 0.5vw 0.5vw;
+    letter-spacing: 0.08vw;
+    font-size: 1.2vw;
+    color: black;
+  }
+
+  #nav li.active a {
+    color: rgb(248, 80, 108);
+  }
+
+  #nav > ul > li > ul {
+    position: relative;
+    display: flex;
+  }
+
+  #nav > ul > li > i {
+    position: relative;
+    top: 2.15vw;
+    right: 0.1vw;
+  }
+  /** sideMenu **/
+  .overlay {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 109, 128, 0.952);
+  }
+
+  #cTitle {
+    margin-top: 100%;
+    font-size: 3.5vw;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 100%;
+  }
+
+  .overlay button {
+    margin-bottom: 8vw;
+    display: block;
+    font-size: 3.5vw;
+    background-color: rgba(255, 109, 128, 0.952);
+    width: 100%;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-family: 'Slabo 27px', serif;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .overlay button:hover {
+    background-color: rgba(255, 44, 72, 0.952);
+    color: white;
+  }
+
+  /** product **/
+  #image {
+    height: auto;
+    max-width: 80%;
+  }
+
+  .dec {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  #price {
+    text-align: left;
+    font-size: 4vw;
+  }
+
+  .category {
+    margin-top: 2%;
+    padding-left: 20%;
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #cBags {
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  #bTitle {
+    font-size: 5vw;
+    text-align: center;
+    border-bottom-style: double;
+  }
+
+  #cClutches {
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  #ccTitle {
+    font-size: 5vw;
+    text-align: center;
+    border-bottom-style: double;
+  }
+
+  #cWallets {
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  #wTitle {
+    font-size: 5vw;
+    text-align: center;
+    border-bottom-style: double;
+  }
+
+  #cAccs {
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  #aTitle {
+    font-size: 5vw;
+    text-align: center;
+    border-bottom-style: double;
+  }
+
+  /** footer **/
+
+  #copyright {
+    font-family: 'Slabo 27px', serif;
+    font-size: 0.8vw;
+    padding-left: 23.5vw;
+    color: #707465;
+  }
+
+  footer button {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.8vw;
+  }
+
+  #openB {
+    background-color: #9de3d0;
+    color: black;
+    padding: 1vw 1vw;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 1vw;
+    right: 2vw;
+    width: 20vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+
+  .formP {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 100vw;
+    right: 10vw;
+    border: 3px solid #f8d5d5;
+    width: 80%;
+    height: auto;
+    background-color: rgba(253, 243, 243, 0.904);
+  }
+
+  #forms {
+    padding: 10vw 5vw 5vw 5vw;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3vw;
+  }
+
+  #forms #btn {
+    background-color: #97ee6f;
+    color: rgb(5, 5, 5);
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+    padding: 2vw 2vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+  }
+
+  #forms #btnC {
+    background-color: rgb(134, 131, 131);
+    color: rgb(5, 5, 5);
+    padding: 0.5vw;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 2vw 2vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+    opacity: 0.8;
+  }
+
+  #forms #btn:hover,
+  #openB:hover {
+    opacity: 1;
+  }
+
+  #footerLogo {
+    padding-left: 20%;
+  }
+
+  /** form **/
+  #forms input[type='text'],
+  #forms input[type='email'] {
+    width: 98%;
+    margin-bottom: 2vw;
+    border: none;
+    background: #f5cece;
+    font-size: 4vw;
+  }
+
+  #forms input[type='text']:focus,
+  #forms input[type='email']:focus {
+    background-color: rgb(204, 198, 198);
+    outline: none;
+  }
+}
+
+/* contact */
+
+.formC {
+  left: 25vw;
+  position: relative;
+  border: 3px solid #f8d5d5;
+  width: 50%;
+  height: auto;
+  background-color: rgba(253, 243, 243, 0.904);
+}
+
+#formas {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1 2fr;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+main h1 {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+
+#formas input[type='text'],
+#formas input[type='email'] {
+  width: 98%;
+  margin-bottom: 0.5vw;
+  border: none;
+  background: #f5cece;
+  font-size: 1vw;
+}
+
+#formas input[type='text']:focus,
+#formas input[type='email']:focus {
+  background-color: rgb(204, 198, 198);
+  outline: none;
+}
