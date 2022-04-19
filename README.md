@@ -8,5 +8,5 @@ The Assigments have been sorted by branches.
 
 - A4. Practice interactive DOM Programming: https://github.com/rot3k/WEB222/tree/A4
 
-- A5. Design your own store web site: https://github.com/rot3k/WEB222/tree/Final
+- Final. Design your own store web site: https://github.com/rot3k/WEB222/tree/Final
 
